@@ -1,0 +1,17 @@
+Adobe After Effects v24.0.3 Windows 64 render log for project “victorine.aep”
+
+Rendering started on 31.03.2024 at 9:54:51
+
+  31.03.2024 9:54:52: Starting composition “inteface”.
+
+  Output To: C:\work\SCRIPT_BANK\victorine\inteface.mp4    31.03.2024 9:55:04: Finished composition “inteface”.
+
+
+  31.03.2024 9:55:05: Starting composition “background”.
+
+  Output To: C:\work\SCRIPT_BANK\victorine\background.mp4    31.03.2024 9:55:22: Finished composition “background”.
+
+
+  Total Time Elapsed: 30 Seconds
+Log closed on 31.03.2024 at 9:55:22
+
