@@ -3,11 +3,8 @@ import platform
 from gtts import gTTS
 import subprocess
 from textwrap import wrap
-from colorama import init, Fore, Back, Style
 
-def colorize(numb, text):
-    colors = [Fore.BLUE, Fore.GREEN, Fore.MAGENTA, Fore.RED, Fore.YELLOW, Fore.LIGHTBLUE_EX, Fore.LIGHTGREEN_EX]
-    return f'{colors[numb]}{text}{Fore.RESET}'
+
 
 def get_dur(link):
     cmd = ["ffprobe", "-i", link, "-show_entries", "format=duration", "-v", "quiet",  "-of", "csv=p=0"]
