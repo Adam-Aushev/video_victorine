@@ -84,8 +84,8 @@ def made_victorine(block, delims='.'):
     inputs_list = []
     
 
-    quest_size = scale[1] / (25 + made_textfile(f'qwest_file.txt', block[0], line_max = 7))
-    explain_size = scale[1] / (25 +made_textfile(f'explain_file.txt', explain, line_max=20))
+    quest_size = scale[1] / (25 + made_textfile(f'sources/qwest_file.txt', block[0], line_max = 7))
+    explain_size = scale[1] / (25 +made_textfile(f'sources/explain_file.txt', explain, line_max=20))
     answer_size = scale[1] / 25
     for made_aud in QA_name_list:
         get_aud(block[QA_name_list.index(made_aud)], made_aud)
@@ -96,12 +96,12 @@ def made_victorine(block, delims='.'):
     
     first_stage_time = sum(aud_times[:5]) + 6.22 + aud_times[right_answer] 
     
-    inputs_list.append({'text':'qwest_file.txt',   'link':path + 'quest.mp3',    'dur':aud_times[0], 'time_in':1,                   'time_out':first_stage_time - 1, 'pos_y':'h/3.4 - (text_h/2)' , 'size':quest_size})
+    inputs_list.append({'text':'sources/qwest_file.txt',   'link':path + 'quest.mp3',    'dur':aud_times[0], 'time_in':1,                   'time_out':first_stage_time - 1, 'pos_y':'h/3.4 - (text_h/2)' , 'size':quest_size})
     inputs_list.append({'text':block[1],           'link':path + 'answer_1.mp3', 'dur':aud_times[1], 'time_in':sum(aud_times[0:1]), 'time_out':first_stage_time - sum(aud_times[0:1]), 'pos_y':'(h/10.4  * 0 + (h/8*4.54)) - (text_h/2)', 'size':answer_size })
     inputs_list.append({'text':block[2],           'link':path + 'answer_2.mp3', 'dur':aud_times[2], 'time_in':sum(aud_times[0:2]), 'time_out':first_stage_time - sum(aud_times[0:2]), 'pos_y':'(h/10.4  * 1 + (h/8*4.54)) - (text_h/2)', 'size':answer_size })
     inputs_list.append({'text':block[3],           'link':path + 'answer_3.mp3', 'dur':aud_times[3], 'time_in':sum(aud_times[0:3]), 'time_out':first_stage_time - sum(aud_times[0:3]), 'pos_y':'(h/10.4  * 2 + (h/8*4.54)) - (text_h/2)', 'size':answer_size })
     inputs_list.append({'text':block[4],           'link':path + 'answer_4.mp3', 'dur':aud_times[4], 'time_in':sum(aud_times[0:4]), 'time_out':first_stage_time - sum(aud_times[0:4]), 'pos_y':'(h/10.4  * 3 + (h/8*4.54)) - (text_h/2)', 'size':answer_size })
-    inputs_list.append({'text':'explain_file.txt', 'link':path + 'explain.mp3',  'dur':aud_times[5], 'time_in':first_stage_time+1,  'time_out':aud_times[5],                      'pos_y':'(h/2) - (text_h/2)',                      'size':explain_size })
+    inputs_list.append({'text':'sources/explain_file.txt', 'link':path + 'explain.mp3',  'dur':aud_times[5], 'time_in':first_stage_time+1,  'time_out':aud_times[5],                      'pos_y':'(h/2) - (text_h/2)',                      'size':explain_size })
 
     input_links = ''
     for inp in inputs_list:
